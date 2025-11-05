@@ -1,0 +1,11 @@
+before using the apply comand which is Useful if AWS resources are failing due to race conditions.
+"terraform apply -parallelism=1"
+
+
+0a5c2ac124586af50
+aws ec2 describe-instances --instance-ids i-0a5c2ac124586af50 --query "Reservations[0].Instances[0].IamInstanceProfile" --output json
+aws ec2 describe-instances --instance-ids i-0a5c2ac124586af50 --query "Reservations[0].Instances[0].ImageId" --output text
+
+
+ECS_CLUSTER=your_cluster_name
+ 
